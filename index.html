@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <input type="number" placeholder="enter a number" value="" id="input1">
+  <input type="number" placeholder="enter a number" value="" id="input2">
+  <input type="text" placeholder="enter a operator" value="" id="input3">
+  <button id="btn" type="submit">Find</button>
+  <p id="demo"></p>
+  <script>
+    let btn=document.getElementById("btn");
+	
+	btn.addEventListener("click",()=>{
+		let in1=document.getElementById("input1").value;
+		let in2=document.getElementById("input2").value;
+		let in3=document.getElementById("input3").value;
+		let demo=document.getElementById("demo");
+		if(in3=='+'||in3=='-'||in3=='*'||in3=='/'){
+		 let result=1;
+		  result= eval(in1+in3+in2);
+		  demo.innerHTML=result;
+		}
+		else{
+		 demo.innerHTML="enter a valid operators"
+		}
+	})
+  </script>
+</body>
+</html>
